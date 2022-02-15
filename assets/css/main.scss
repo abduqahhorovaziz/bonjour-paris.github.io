@@ -1,0 +1,269 @@
+/*===== LOCAL FONTS =====*/
+
+@font-face {
+  font-family: "Gilroy Bold";
+  src: url("../fonts/Gilroy-Bold.ttf");
+}
+
+@font-face {
+  font-family: "Gilroy Normal";
+  src: url("../fonts/Gilroy-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Dubiel Normal";
+  src: url("../fonts/Dubiel.ttf");
+}
+
+/*===== FONTS =====*/
+:root {
+  --bold-font: "Gilroy Bold", sans-serif;
+  --normal-font: "Gilroy Normal", sans-serif;
+  --dubiel-font: "Dubiel Normal", sans-serif;
+}
+
+/*===== z index =====*/
+:root {
+  --z-back: -10;
+  --z-normal: 1;
+  --z-tooltip: 10;
+  --z-fixed: 100;
+}
+
+/*===== BASE =====*/
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: var(--header-height) 0 0 0;
+  font-family: var(--normal-font);
+  color: #fff;
+}
+h1,
+h2,
+p {
+  margin: 0;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+header {
+  width: 100%;
+  padding-top: 40px;
+  max-width: 1680px;
+  margin: 0 auto;
+  position: relative;
+
+  .lang__box {
+    width: 167px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    right: 335px;
+    div {
+        opacity: 0.3;
+      img {
+        width: 18px;
+        height: auto;
+        margin-right: 5px;
+      }
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      
+      color: #ffffff;
+      letter-spacing: 2px;
+      font-weight: bold;
+      font-size: 13px;
+      line-height: 13px;;
+    }
+    .active{
+        opacity: unset;
+    }
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 8vh;
+    font-family: var(--normal-font);
+
+    .heart-card {
+        position: relative;
+      i {
+        color: #ffffff;
+        font-size: 40px;
+      }
+      span{
+          display: block;
+          width: 21px;
+          height: 17px;
+          background-color: #ECCC5A;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 5px;
+          position: absolute;
+          top: 0;
+          right: -10px;
+
+          p{
+            font-size: 9px;
+            font-weight: bold;
+            color: #000;
+           
+          }
+      }
+    }
+  }
+}
+
+.logo {
+  color: rgb(226, 226, 226);
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 20px;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+  width: 60%;
+}
+
+.nav-links li {
+  list-style: none;
+}
+
+.nav-links a {
+  color: #ffffff;
+  text-decoration: none;
+  letter-spacing: 3px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.burger {
+  display: none;
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: rgb(226, 226, 226);
+  margin: 5px;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.l__main {
+  width: 100%;
+  min-height: 100vh;
+  background-image: linear-gradient(rgba(0,0,0,0.5)), url(../images/main-background.png);
+  background-size: 150%;
+  background-position: top;
+  overflow: hidden;
+  position: relative;
+
+  .bg__logo{
+    position: absolute;
+    top: 56%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.1;
+    z-index: 0;
+  }
+
+  .swipe__box{
+    width: 100%;
+    max-width: 1680px;
+    min-height: 90vh;
+    margin: 0 auto;
+
+  }
+
+
+
+}
+
+
+
+@media screen and (max-width: 1024px) {
+  .nav-links {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .nav-links {
+    position: absolute;
+    right: 0px;
+    height: 92vh;
+    top: 8vh;
+    background-color: #5d4954;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+  }
+
+  .nav-links li {
+    opacity: 0;
+  }
+
+  .burger {
+    display: block;
+    cursor: pointer;
+  }
+}
+
+.nav-active {
+  transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+  opacity: 0;
+}
+
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}

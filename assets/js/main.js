@@ -23,9 +23,8 @@ const navSlide = () => {
 
 navSlide();
 
-const btnContainer = document.querySelector('.btn-container');
-const btn = btnContainer.querySelector('.btn');
-
-btnContainer.onclick = function() {
-  btn.classList.toggle('checked');
-}
+$(function () {
+    $(".heart").on("click", function () {
+        $(this).toggleClass("is-active");
+    });
+});

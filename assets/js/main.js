@@ -23,15 +23,9 @@ const navSlide = () => {
 
 navSlide();
 
+const btnContainer = document.querySelector('.btn-container');
+const btn = btnContainer.querySelector('.btn');
 
-const btn = document.querySelector('button');
-const icon = document.querySelector('button i');
-
-btn.addEventListener('click', ()=>{
-    if(btn.className === 'test'){
-        btn.classList.add('animate');
-        console.log("BTN")
-    }else{
-        btn.classList.remove('animate');
-    }
-})
+btnContainer.onclick = function() {
+  btn.classList.toggle('checked');
+}

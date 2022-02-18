@@ -24,6 +24,8 @@
     <title>Bonjour Paris</title>
   </head>
   <body>
+    
+    <!-- ===== MAIN ===== -->
     <div class="l__main">
       <!--===== HEADER =====-->
       <header>
@@ -130,7 +132,9 @@
               </div>
             </div>
 
-            <div class="swiper-button-next"></div>
+            <div class="swiper-button-next">
+            <i class='bx bx-arrow-back'></i>
+            </div>
           </div>
         </div>
       </div>
@@ -145,10 +149,131 @@
       <!-- ===== END SOCIAL ICONS ===== -->
 
     </div>
+    <!-- ===== END MAIN ===== -->
+
+    <!-- ===== ALL PARFUMS ===== -->
+    <div class="all__parfums">
+      <div class="swiper__products__one">
+        <p class="title__page">Umumiy atirlar</p>
+      
+        <!-- Swiper -->
+        <div class="swiper mySwiper2">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="parfums__box">
+                <div class="heart__button">
+                  <button class="test "><i class='bx bxs-heart'></i></button>
+                </div>
+                <img src="assets/images/products/blue-diamond-eau-de-parfum.png" alt="">
+              </div>
+              <div class="info__parfum">
+                <p class="name__parfum">Blue Diamond Eau de parfum</p>
+                <p class="price__parfum">3.000.000 so'm</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="parfums__box">
+                <div class="heart__button">
+                  <button class="test "><i class='bx bxs-heart'></i></button>
+                </div>
+                <img src="assets/images/products/silver.png" alt="">
+              </div>
+              <div class="info__parfum">
+                <p class="name__parfum">SILVER</p>
+                <p class="price__parfum">2.500.000 so'm</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="parfums__box">
+                <img src="assets/images/products/kirke.png" alt="">
+              </div>
+              <div class="info__parfum">
+                <p class="name__parfum">kirke Eau de parfum</p>
+                <p class="price__parfum">1.000.000 so'm</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="parfums__box">
+                <img src="assets/images/products/blue-diamond-eau-de-parfum.png" alt="">
+              </div>
+              <div class="info__parfum">
+                <p class="name__parfum">Blue Diamond Eau de parfum</p>
+                <p class="price__parfum">3.000.000 so'm</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="parfums__box">
+                <img src="assets/images/products/blue-diamond-eau-de-parfum.png" alt="">
+              </div>
+              <div class="info__parfum">
+                <p class="name__parfum">Blue Diamond Eau de parfum</p>
+                <p class="price__parfum">3.000.000 so'm</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="parfums__box">
+                <img src="assets/images/products/blue-diamond-eau-de-parfum.png" alt="">
+              </div>
+              <div class="info__parfum">
+                <p class="name__parfum">Blue Diamond Eau de parfum</p>
+                <p class="price__parfum">3.000.000 so'm</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="parfums__box">
+                <img src="assets/images/products/blue-diamond-eau-de-parfum.png" alt="">
+              </div>
+              <div class="info__parfum">
+                <p class="name__parfum">Blue Diamond Eau de parfum</p>
+                <p class="price__parfum">3.000.000 so'm</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="parfums__box">
+                <img src="assets/images/products/blue-diamond-eau-de-parfum.png" alt="">
+              </div>
+              <div class="info__parfum">
+                <p class="name__parfum">Blue Diamond Eau de parfum</p>
+                <p class="price__parfum">3.000.000 so'm</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="parfums__box">
+                <img src="assets/images/products/blue-diamond-eau-de-parfum.png" alt="">
+              </div>
+              <div class="info__parfum">
+                <p class="name__parfum">Blue Diamond Eau de parfum</p>
+                <p class="price__parfum">3.000.000 so'm</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="parfums__box">
+                <img src="assets/images/products/blue-diamond-eau-de-parfum.png" alt="">
+              </div>
+              <div class="info__parfum">
+                <p class="name__parfum">Blue Diamond Eau de parfum 2</p>
+                <p class="price__parfum">3.000.000 so'm</p>
+              </div>
+            </div>
+
+          </div>
+          <div class="swiper-button-next">
+            <i class='bx bx-arrow-back'></i>
+          </div>
+          <div class="swiper-button-prev">
+            <i class='bx bx-arrow-back'></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ===== END ALL PARFUMS ===== -->
+
+
+
   </body>
 
   <!-- ===== MAIN JS ===== -->
-  <script src="assets/js/main.js"></script>
+  <script src="assets/js/main.js" async></script>
 
   <!-- ===== SWIPER JS ===== -->
   <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
@@ -167,6 +292,9 @@
         modifier: 1,
         slideShadows: false,
       },
+      autoplay: {
+        delay: 7000,
+      },
       pagination: {
         el: ".swiper-pagination",
       },
@@ -176,6 +304,21 @@
 
       loop: true,
     });
+    
+    var swiper = new Swiper(".mySwiper2", {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        slidesPerGroup: 1,
+        loop: true,
+        loopFillGroupWithBlank: true,
+        autoplay: {
+          delay: 7000,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
   </script>
   <!-- ===== END SCRIPT FOR SWIPER ===== -->
 

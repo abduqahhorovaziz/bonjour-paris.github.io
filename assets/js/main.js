@@ -24,3 +24,14 @@ const navSlide = () => {
 navSlide();
 
 
+const btn = document.querySelector('button');
+const icon = document.querySelector('button i');
+
+btn.addEventListener('click', ()=>{
+    if(btn.className === 'test'){
+        btn.classList.add('animate');
+        console.log("BTN")
+    }else{
+        btn.classList.remove('animate');
+    }
+})

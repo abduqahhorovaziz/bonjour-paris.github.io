@@ -171,8 +171,8 @@ header nav .heart-card span p {
 .l__main {
   width: 100%;
   min-height: 100vh;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3))), url(../images/main-background.png);
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3)), url(../images/main-background.png);
+  background-image: -webkit-gradient(linear, right top, left top, color-stop(50%, black), to(rgba(0, 0, 0, 0.3))), url(../images/main-background.png);
+  background-image: linear-gradient(-90deg, black 50%, rgba(0, 0, 0, 0.3)), url(../images/main-background.png);
   background-size: 150%;
   background-position: top;
   overflow: hidden;
@@ -307,10 +307,18 @@ header nav .heart-card span p {
 .l__main .swipe__box .right__side .swiper .swiper-button-next::after {
   color: #eccc5a !important;
   font-size: 20px !important;
+  display: none;
 }
 
 .l__main .swipe__box .right__side .swiper .swiper-button-next {
   top: 38% !important;
+}
+
+.l__main .swipe__box .right__side .swiper .swiper-button-next i {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  font-size: 32px;
+  color: #eccc5a !important;
 }
 
 .l__main .swipe__box .right__side .swiper .right__box {
@@ -347,6 +355,172 @@ header nav .heart-card span p {
 
 .l__main .social__box a:hover {
   color: #eccc5a;
+}
+
+.all__parfums {
+  width: 100%;
+  min-height: 40vh;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(black));
+  background-image: linear-gradient(black);
+}
+
+.all__parfums .swiper__products__one {
+  width: 100%;
+  max-width: 1275px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.all__parfums .swiper__products__one .title__page {
+  font-family: var(--normal-font);
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 24px;
+  color: #ffffff;
+  padding-top: 27px;
+}
+
+.all__parfums .swiper__products__one .mySwiper2 {
+  width: 100%;
+  height: 100%;
+  padding-top: 50px;
+}
+
+.all__parfums .swiper__products__one .mySwiper2 .swiper-button-next {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  color: #404040;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.all__parfums .swiper__products__one .mySwiper2 .swiper-button-next::after {
+  font-size: 16px;
+  display: none;
+}
+
+.all__parfums .swiper__products__one .mySwiper2 .swiper-button-next:hover {
+  color: #ffffff;
+}
+
+.all__parfums .swiper__products__one .mySwiper2 .swiper-button-next i {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  font-size: 25px;
+}
+
+.all__parfums .swiper__products__one .mySwiper2 .swiper-button-prev {
+  position: absolute;
+  top: 20px;
+  left: 1180px;
+  color: #404040;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.all__parfums .swiper__products__one .mySwiper2 .swiper-button-prev::after {
+  font-size: 16px;
+  display: none;
+}
+
+.all__parfums .swiper__products__one .mySwiper2 .swiper-button-prev:hover {
+  color: #ffffff;
+}
+
+.all__parfums .swiper__products__one .mySwiper2 .swiper-button-prev i {
+  font-size: 25px;
+}
+
+.all__parfums .swiper__products__one .mySwiper2 .swiper-wrapper .swiper-slide {
+  width: 369.51px !important;
+  min-height: 365px !important;
+  background: #0d0c0b;
+  margin-right: 66px !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.all__parfums .swiper__products__one .mySwiper2 .swiper-wrapper .parfums__box {
+  width: 100%;
+  height: 365px !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+}
+
+.all__parfums .swiper__products__one .mySwiper2 .swiper-wrapper .parfums__box .heart__button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 2;
+}
+
+.all__parfums .swiper__products__one .mySwiper2 .swiper-wrapper .parfums__box .heart__button button {
+  background: none;
+  border: none;
+  outline: none;
+  padding: 16px 30px;
+  border-radius: 25px;
+  font-weight: bold;
+  font-size: 20px;
+  color: #333;
+  cursor: pointer;
+  -webkit-box-shadow: 0px 1px 2px 1px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 1px 2px 1px rgba(0, 0, 0, 0.25);
+}
+
+.all__parfums .swiper__products__one .mySwiper2 .swiper-wrapper .parfums__box .heart__button button i {
+  -webkit-transition: .2s ease;
+  transition: .2s ease;
+}
+
+.all__parfums .swiper__products__one .mySwiper2 .swiper-wrapper .parfums__box .heart__button .animate {
+  color: crimson;
+}
+
+.all__parfums .swiper__products__one .mySwiper2 .swiper-wrapper .info__parfum {
+  background-color: #000 !important;
+  width: 100%;
+  text-align: center;
+  padding-top: 30px;
+}
+
+.all__parfums .swiper__products__one .mySwiper2 .swiper-wrapper .info__parfum .name__parfum {
+  font-family: var(--normal-font);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 163%;
+  letter-spacing: 0.155em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.all__parfums .swiper__products__one .mySwiper2 .swiper-wrapper .info__parfum .price__parfum {
+  font-family: var(--bold-font);
+  font-size: 20px;
+  line-height: 163%;
+  letter-spacing: 0.155em;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-top: 20px;
 }
 
 @media screen and (max-width: 1024px) {

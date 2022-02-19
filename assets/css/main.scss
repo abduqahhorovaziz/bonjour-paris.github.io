@@ -1,4 +1,4 @@
-  /*===== LOCAL FONTS =====*/
+/*===== LOCAL FONTS =====*/
 
 @font-face {
   font-family: "Gilroy Bold";
@@ -295,11 +295,10 @@ header {
         .swiper-button-next {
           top: 38% !important;
 
-          i{
+          i {
             transform: rotate(180deg);
             font-size: 32px;
-           color: #eccc5a !important;
-
+            color: #eccc5a !important;
           }
         }
         .right__box {
@@ -345,7 +344,7 @@ header {
   width: 100%;
   min-height: 40vh;
   background-image: linear-gradient(rgb(0, 0, 0));
-
+  padding-top: 100px;
   .swiper__products__one {
     width: 100%;
     max-width: 1275px;
@@ -365,47 +364,43 @@ header {
       width: 100%;
       height: 100%;
       padding-top: 50px;
-      .swiper-button-next{
+      .swiper-button-next {
         position: absolute;
-        top: 20px; 
+        top: 20px;
         right: 25px;
         color: #404040;
         transition: 0.3s ease;
-        &::after{
-          font-size: 16px;
-          display: none
-        }
-        &:hover{
-          color: #ffffff;
-        }
-
-        i{
-          transform: rotate(180deg);
-          font-size: 25px;
-
-        }
-      }
-      .swiper-button-prev{
-        position: absolute;
-        top: 20px; 
-        left: 1180px;
-        color: #404040;    
-        transition: 0.3s ease;
-        &::after{
+        &::after {
           font-size: 16px;
           display: none;
-
         }
-        &:hover{
+        &:hover {
           color: #ffffff;
         }
-        i{
-          font-size: 25px;
 
+        i {
+          transform: rotate(180deg);
+          font-size: 25px;
+        }
+      }
+      .swiper-button-prev {
+        position: absolute;
+        top: 20px;
+        left: 1180px;
+        color: #404040;
+        transition: 0.3s ease;
+        &::after {
+          font-size: 16px;
+          display: none;
+        }
+        &:hover {
+          color: #ffffff;
+        }
+        i {
+          font-size: 25px;
         }
       }
       .swiper-wrapper {
-        
         .swiper-slide {
           width: 369.51px !important;
           min-height: 365px !important;
@@ -415,48 +410,40 @@ header {
           justify-content: center;
           align-items: center;
           flex-wrap: wrap;
+        }
 
-          }
+        .parfums__box {
+          width: 100%;
+          height: 365px !important;
+          display: flex;
+          align-items: flex-end;
+          justify-content: center;
+          position: relative;
 
-          .parfums__box {
-            width: 100%;
-            height: 365px !important;
-            display: flex;
-            align-items: flex-end;
-            justify-content: center;
-            position: relative;
-            
-            .heart__button{
-              position: absolute;
-              top: 20px;
-              right: 20px;
-              z-index: 2;
+          .heart__button {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            z-index: 2;
 
-              .heart {
-                width: 20px;
-                height: 20px;
-                cursor: pointer;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                color: rgb(150, 150, 150);
+            .heart {
+              width: 20px;
+              height: 20px;
+              cursor: pointer;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              color: rgb(150, 150, 150);
 
-                &.is-active {
-                  i{
-                    color: #ECCC5A;
-                  }
+              &.is-active {
+                i {
+                  color: #eccc5a;
                 }
-                
               }
-              
-              
-              
-              
+            }
           }
-
-            
-         }
-         .info__parfum {
+        }
+        .info__parfum {
           background-color: #000 !important;
           width: 100%;
           text-align: center;
@@ -487,6 +474,102 @@ header {
     }
   }
 }
+
+.about__us__main {
+  width: 100%;
+  min-height: 40vh;
+  background-color: #000;
+  background-position: left;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 100px;
+  position: relative;
+
+
+  .title__box {
+    width: 100%;
+    max-width: 1275px;
+    height: 100%;
+    margin: 0 auto;
+    .title__page {
+      font-family: var(--normal-font);
+      font-weight: bold;
+      font-size: 20px;
+      line-height: 24px;
+      color: #ffffff;
+      padding-top: 27px;
+    }
+  }
+  .about__us {
+    width: 100%;
+    max-width: 1275px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    .image__side {
+      .image__box {
+        margin-top: 25px;
+        width: 369.51px;
+        height: 365px;
+      }
+    }
+    .info__side {
+      padding-top: 45px;
+      margin-left: 65px;
+      p {
+        font-family: var(--normal-font);
+        font-style: normal;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 24px;
+        color: #ffffff;
+      }
+      p:nth-child(2) {
+        font-weight: normal;
+        margin-top: 30px;
+        font-size: 20px;
+        line-height: 28px;
+        text-align: justify;
+      }
+      p:nth-child(3) {
+        margin-top: 30px;
+        font-size: 20px;
+        margin-bottom: 100px;
+      }
+      a {
+        font-family: var(--normal-font);
+        font-style: normal;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 141.5%;
+
+        text-align: justify;
+
+        color: #ffffff;
+
+        display: flex;
+        align-items: center;
+
+        transition: 0.3s ease;
+        i {
+          transform: rotate(180deg);
+          margin-left: 11px;
+          transition: 0.3s ease;
+        }
+
+        &:hover {
+          color: #eccc5a;
+
+          i {
+            margin-left: 20px;
+            color: #eccc5a;
+          }
+        }
+      }
+    }
+  }
+}
+
 
 @media screen and (max-width: 1024px) {
   .nav-links {

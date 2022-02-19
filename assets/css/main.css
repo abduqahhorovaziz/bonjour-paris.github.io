@@ -362,6 +362,7 @@ header nav .heart-card span p {
   min-height: 40vh;
   background-image: -webkit-gradient(linear, left top, left bottom, from(black));
   background-image: linear-gradient(black);
+  padding-top: 100px;
 }
 
 .all__parfums .swiper__products__one {
@@ -489,7 +490,7 @@ header nav .heart-card span p {
 }
 
 .all__parfums .swiper__products__one .mySwiper2 .swiper-wrapper .parfums__box .heart__button .heart.is-active i {
-  color: #ECCC5A;
+  color: #eccc5a;
 }
 
 .all__parfums .swiper__products__one .mySwiper2 .swiper-wrapper .info__parfum {
@@ -518,6 +519,114 @@ header nav .heart-card span p {
   text-transform: uppercase;
   color: #ffffff;
   margin-top: 20px;
+}
+
+.about__us__main {
+  width: 100%;
+  min-height: 40vh;
+  background-color: #000;
+  background-position: left;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 100px;
+  position: relative;
+}
+
+.about__us__main .title__box {
+  width: 100%;
+  max-width: 1275px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.about__us__main .title__box .title__page {
+  font-family: var(--normal-font);
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 24px;
+  color: #ffffff;
+  padding-top: 27px;
+}
+
+.about__us__main .about__us {
+  width: 100%;
+  max-width: 1275px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.about__us__main .about__us .image__side .image__box {
+  margin-top: 25px;
+  width: 369.51px;
+  height: 365px;
+}
+
+.about__us__main .about__us .info__side {
+  padding-top: 45px;
+  margin-left: 65px;
+}
+
+.about__us__main .about__us .info__side p {
+  font-family: var(--normal-font);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  color: #ffffff;
+}
+
+.about__us__main .about__us .info__side p:nth-child(2) {
+  font-weight: normal;
+  margin-top: 30px;
+  font-size: 20px;
+  line-height: 28px;
+  text-align: justify;
+}
+
+.about__us__main .about__us .info__side p:nth-child(3) {
+  margin-top: 30px;
+  font-size: 20px;
+  margin-bottom: 100px;
+}
+
+.about__us__main .about__us .info__side a {
+  font-family: var(--normal-font);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 141.5%;
+  text-align: justify;
+  color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.about__us__main .about__us .info__side a i {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  margin-left: 11px;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.about__us__main .about__us .info__side a:hover {
+  color: #eccc5a;
+}
+
+.about__us__main .about__us .info__side a:hover i {
+  margin-left: 20px;
+  color: #eccc5a;
 }
 
 @media screen and (max-width: 1024px) {

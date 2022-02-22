@@ -442,7 +442,42 @@ header {
           align-items: flex-end;
           justify-content: center;
           position: relative;
+          overflow: hidden;
 
+          &:hover{
+            .modal__box{
+              transform: translateY(0);
+              opacity: 1;
+            }
+          }
+
+          .modal__box{
+            background: rgba(15, 15, 15, 0.7);
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            transition: 0.3s ease;
+            
+            opacity: 0;
+            transform: translateY(100%);
+
+            display: flex;
+            align-items:center;
+            justify-content:center;
+
+
+            a{
+              font-family: var(--normal-font);
+              font-weight: bold;
+              font-size: 20px;
+              line-height: 24px;
+              color: #ffffff;
+              text-align: center;
+              padding: 15px 50px; 
+              border: 1px solid white;
+            }
+
+          }
           .heart__button {
             position: absolute;
             top: 20px;

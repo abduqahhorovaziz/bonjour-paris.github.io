@@ -280,7 +280,10 @@ header {
               /* background-color: rgb(182, 232, 255, 0.5); */
               transition: 1s ease;
               position: absolute;
-              bottom: 50px;
+              bottom: 30px;
+              display: flex;
+              flex-direction: column;
+              align-items:center;
 
               p {
                 text-align: center;
@@ -290,6 +293,14 @@ header {
                 color: white;
                 font-weight: bold;
                 letter-spacing: 2px;
+                margin-top: 10px;
+              }
+
+              span{
+                color: yellow;
+                i{
+                  margin-right: 10px;
+                }
               }
             }
           }
@@ -506,6 +517,17 @@ header {
           width: 100%;
           text-align: center;
           padding-top: 30px;
+
+          span{
+            margin-top: 20px;
+            display: block;
+
+            i{
+              font-size: 18px;
+              margin-right: 10px;
+              color: yellow
+            }
+          }
 
           .name__parfum {
             font-family: var(--normal-font);

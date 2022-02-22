@@ -28,3 +28,27 @@ $(function () {
         $(this).toggleClass("is-active");
     });
 });
+
+var modal = document.getElementById('simpleModal');
+var modalBtn = document.getElementById('modalBtn');
+
+modalBtn.addEventListener('click', openModal);
+window.addEventListener('click', clickOutside)
+
+
+// $(function () {
+//     $(".modalBtn").on("click", function () {
+//         $("#simpleModal").toggleClass("is-active");
+//     });
+// });
+
+function openModal() {
+    modal.style.display = 'block';
+}
+
+
+function clickOutside(e){
+    if(e.target == modal){
+        modal.style.display = 'none';
+    }
+}

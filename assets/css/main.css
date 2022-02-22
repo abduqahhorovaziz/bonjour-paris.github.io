@@ -415,6 +415,135 @@ header nav .heart-card span p {
   padding-top: 100px;
 }
 
+.all__parfums .modal {
+  display: none;
+  position: fixed;
+  z-index: 99999999999999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.all__parfums .modal.is-active {
+  display: block;
+}
+
+.all__parfums .modal .modal__content {
+  width: 1114px;
+  height: 696px;
+  margin: 0 auto;
+  margin-top: 100px;
+  background: linear-gradient(240.6deg, #41381d 5.47%, #0d0c0b 59.13%, #0d0c0b 76.57%);
+  padding-top: 94px;
+  padding-left: 176px;
+  -webkit-animation-name: modalopen;
+          animation-name: modalopen;
+  -webkit-animation-duration: .5s;
+          animation-duration: .5s;
+}
+
+@-webkit-keyframes modalopen {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes modalopen {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.all__parfums .modal .modal__content .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.all__parfums .modal .modal__content .row .image__box img {
+  width: 222.04px;
+  height: 417.33px;
+}
+
+.all__parfums .modal .modal__content .row .content__box {
+  margin-left: 70px;
+}
+
+.all__parfums .modal .modal__content .row .content__box .product__name {
+  margin-top: 83px;
+  font-family: var(--normal-font);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 25px;
+  line-height: 163%;
+  letter-spacing: 0.155em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.all__parfums .modal .modal__content .row .content__box span i {
+  font-size: 18px;
+  margin-right: 24px;
+  margin-top: 30px;
+  color: #eccc5a;
+}
+
+.all__parfums .modal .modal__content .row .content__box span i:nth-child(4) {
+  opacity: 0.2;
+}
+
+.all__parfums .modal .modal__content .row .content__box span i:nth-child(5) {
+  opacity: 0.2;
+}
+
+.all__parfums .modal .modal__content .row .content__box .info__prod {
+  margin-top: 30px;
+  font-family: var(--normal-font);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 163%;
+  letter-spacing: 0.155em;
+  color: #ffffff;
+}
+
+.all__parfums .modal .modal__content .row .content__box .price {
+  margin-top: 30px;
+  font-family: var(--normal-font);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 163%;
+  letter-spacing: 0.155em;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-bottom: 50px;
+}
+
+.all__parfums .modal .modal__content .row .content__box a {
+  padding: 11px 19px;
+  background-color: white;
+}
+
+.all__parfums .modal .modal__content .closeBtn {
+  color: #ccc;
+  float: right;
+  font-size: 18px;
+  display: none;
+}
+
 .all__parfums .swiper__products__one {
   width: 100%;
   max-width: 1275px;
@@ -544,7 +673,7 @@ header nav .heart-card span p {
           justify-content: center;
 }
 
-.all__parfums .swiper__products__one .mySwiper2 .swiper-wrapper .parfums__box .modal__box a {
+.all__parfums .swiper__products__one .mySwiper2 .swiper-wrapper .parfums__box .modal__box .button {
   font-family: var(--normal-font);
   font-weight: bold;
   font-size: 20px;
@@ -552,6 +681,8 @@ header nav .heart-card span p {
   color: #ffffff;
   text-align: center;
   padding: 15px 50px;
+  background-color: transparent;
+  cursor: pointer;
   border: 1px solid white;
 }
 

@@ -63,25 +63,24 @@ img {
   display: block;
 }
 
-.to__top{
+.to__top {
   width: 50px;
   height: 50px;
   border-radius: 50%;
   display: flex;
   align-items: center;
-  justify-content:center;
+  justify-content: center;
   position: fixed;
   bottom: 50px;
   right: 50px;
   z-index: 22222222;
 
-
-  i{
+  i {
     color: white;
     font-size: 35px;
     transition: 0.3s ease;
-    &:hover{
-      transform: translateY(-10px)
+    &:hover {
+      transform: translateY(-10px);
     }
   }
 }
@@ -283,7 +282,7 @@ header {
               bottom: 30px;
               display: flex;
               flex-direction: column;
-              align-items:center;
+              align-items: center;
 
               p {
                 text-align: center;
@@ -296,9 +295,9 @@ header {
                 margin-top: 10px;
               }
 
-              span{
+              span {
                 color: yellow;
-                i{
+                i {
                   margin-right: 10px;
                 }
               }
@@ -379,6 +378,131 @@ header {
   min-height: 40vh;
   background-image: linear-gradient(rgb(0, 0, 0));
   padding-top: 100px;
+
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 99999999999999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+
+    
+    &.is-active {
+      display: block;
+    }
+
+    .modal__content {
+      width: 1114px;
+      height: 696px;
+      margin: 0 auto;
+      margin-top: 100px;
+      background: linear-gradient(
+        240.6deg,
+        #41381d 5.47%,
+        #0d0c0b 59.13%,
+        #0d0c0b 76.57%
+      );
+      padding-top: 94px;
+      padding-left: 176px;
+
+      animation-name: modalopen;
+      animation-duration: .5s;
+
+      @keyframes modalopen{
+        from{
+          opacity: 0;
+        }
+        to{
+          opacity: 1;
+        }
+      }
+      .row {
+        display: flex;
+        align-items: flex-start;
+
+        .image__box {
+          img {
+            width: 222.04px;
+            height: 417.33px;
+          }
+        }
+        .content__box {
+          margin-left: 70px;
+
+          .product__name {
+            margin-top: 83px;
+            font-family: var(--normal-font);
+            font-style: normal;
+            font-weight: normal;
+            font-size: 25px;
+            line-height: 163%;
+            letter-spacing: 0.155em;
+            text-transform: uppercase;
+            color: #ffffff;
+          }
+          span {
+            i {
+              font-size: 18px;
+              margin-right: 24px;
+              margin-top: 30px;
+              color: #eccc5a;
+
+              &:nth-child(4) {
+                opacity: 0.2;
+              }
+              &:nth-child(5) {
+                opacity: 0.2;
+              }
+            }
+          }
+
+          .info__prod {
+            margin-top: 30px;
+            font-family: var(--normal-font);
+            font-style: normal;
+            font-weight: normal;
+            font-size: 15px;
+            line-height: 163%;
+
+            letter-spacing: 0.155em;
+
+            color: #ffffff;
+          }
+          .price {
+            margin-top: 30px;
+            font-family: var(--normal-font);
+            font-style: normal;
+            font-weight: bold;
+            font-size: 30px;
+            line-height: 163%;
+            letter-spacing: 0.155em;
+            text-transform: uppercase;
+            color: #ffffff;
+            margin-bottom: 50px;
+          }
+
+          a {
+            padding: 11px 19px;
+            background-color: white;
+          }
+        }
+      }
+
+      .closeBtn{
+        color: #ccc;
+        float: right;
+        font-size: 18px;
+        display:none;
+      }
+    }
+  }
+
+
+
   .swiper__products__one {
     width: 100%;
     max-width: 1275px;
@@ -455,39 +579,39 @@ header {
           position: relative;
           overflow: hidden;
 
-          &:hover{
-            .modal__box{
+          &:hover {
+            .modal__box {
               transform: translateY(0);
               opacity: 1;
             }
           }
 
-          .modal__box{
+          .modal__box {
             background: rgba(15, 15, 15, 0.7);
             width: 100%;
             height: 100%;
             position: absolute;
             transition: 0.3s ease;
-            
+
             opacity: 0;
             transform: translateY(100%);
 
             display: flex;
-            align-items:center;
-            justify-content:center;
+            align-items: center;
+            justify-content: center;
 
-
-            a{
+            .button {
               font-family: var(--normal-font);
               font-weight: bold;
               font-size: 20px;
               line-height: 24px;
               color: #ffffff;
               text-align: center;
-              padding: 15px 50px; 
+              padding: 15px 50px;
+              background-color: transparent;
+              cursor: pointer;
               border: 1px solid white;
             }
-
           }
           .heart__button {
             position: absolute;
@@ -518,14 +642,14 @@ header {
           text-align: center;
           padding-top: 30px;
 
-          span{
+          span {
             margin-top: 20px;
             display: block;
 
-            i{
+            i {
               font-size: 18px;
               margin-right: 10px;
-              color: yellow
+              color: yellow;
             }
           }
 
@@ -959,10 +1083,6 @@ footer {
     }
   }
 }
-
-
-
-
 
 @media screen and (max-width: 1024px) {
   .nav-links {

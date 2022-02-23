@@ -1,0 +1,469 @@
+/*===== LOCAL FONTS =====*/
+
+@font-face {
+    font-family: "Gilroy Bold";
+    src: url("../fonts/Gilroy-Bold.ttf");
+  }
+  
+  @font-face {
+    font-family: "Gilroy Normal";
+    src: url("../fonts/Gilroy-Regular.ttf");
+  }
+  
+  @font-face {
+    font-family: "Dubiel Normal";
+    src: url("../fonts/Dubiel.ttf");
+  }
+  
+  /*===== FONTS =====*/
+  :root {
+    --bold-font: "Gilroy Bold", sans-serif;
+    --normal-font: "Gilroy Normal", sans-serif;
+    --dubiel-font: "Dubiel Normal", sans-serif;
+  }
+  
+  /*===== z index =====*/
+  :root {
+    --z-back: -10;
+    --z-normal: 1;
+    --z-tooltip: 10;
+    --z-fixed: 100;
+  }
+  
+  /*===== BASE =====*/
+  *,
+  ::before,
+  ::after {
+    box-sizing: border-box;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    margin: var(--header-height) 0 0 0;
+    font-family: var(--normal-font);
+    color: #fff;
+  }
+  h1,
+  h2,
+  p {
+    margin: 0;
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  a {
+    text-decoration: none;
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .to__top {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    z-index: 22222222;
+  
+    i {
+      color: white;
+      font-size: 35px;
+      transition: 0.3s ease;
+      &:hover {
+        transform: translateY(-10px);
+      }
+    }
+  }
+  
+  header {
+    width: 100%;
+    padding-top: 40px;
+    max-width: 1320px;
+    margin: 0 auto;
+    position: relative;
+  
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 8vh;
+      font-family: var(--normal-font);
+  
+      .logo {
+        color: rgb(226, 226, 226);
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        font-size: 20px;
+      }
+      .nav-links {
+        display: flex;
+        justify-content: space-around;
+        width: 60%;
+  
+        li {
+          list-style: none;
+  
+          a {
+            color: #ffffff;
+            text-decoration: none;
+            letter-spacing: 3px;
+            font-weight: bold;
+            font-size: 14px;
+          }
+        }
+      }
+  
+      .heart-card {
+        position: relative;
+        i {
+          color: #ffffff;
+          font-size: 40px;
+        }
+        span {
+          display: block;
+          width: 21px;
+          height: 17px;
+          background-color: #eccc5a;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 5px;
+          position: absolute;
+          top: 0;
+          right: -10px;
+  
+          p {
+            font-size: 9px;
+            font-weight: bold;
+            color: #000;
+          }
+        }
+      }
+  
+      .burger {
+        display: none;
+  
+        div {
+          width: 25px;
+          height: 3px;
+          background-color: rgb(226, 226, 226);
+          margin: 5px;
+          border-radius: 2px;
+          transition: all 0.3s ease;
+        }
+      }
+    }
+  }
+  
+  .a__main {
+    width: 100%;
+    min-height: 200px;
+    background-image: linear-gradient(
+        -90deg,
+        rgb(0, 0, 0) 50%,
+        rgba(0, 0, 0, 0.3)
+      ),
+      url(../images/main-background.png);
+    background-size: 150%;
+    background-position: top;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .all__parfums__main {
+    width: 100%;
+    min-height: 400px;
+    background: #000;
+  
+    .all__parfums {
+      width: 1320px;
+      margin: 0 auto;
+  
+      .title__box {
+        font-family: var(--normal-font);
+        font-style: normal;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 24px;
+        color: #ffffff;
+      }
+  
+      .parfums__content {
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          flex-direction: row;
+          flex-wrap: wrap;
+          padding-top: 50px;
+        .swiper-slide-col {
+          width: 369.51px !important;
+          min-height: 365px !important;
+          background: #0d0c0b;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-wrap: wrap;
+          margin-bottom: 80px;
+          display: none;
+        }
+  
+        .parfums__box {
+          width: 100%;
+          height: 365px !important;
+          display: flex;
+          align-items: flex-end;
+          justify-content: center;
+          position: relative;
+          overflow: hidden;
+  
+          &:hover {
+            .modal__box {
+              transform: translateY(0);
+              opacity: 1;
+            }
+          }
+  
+          .modal__box {
+            background: rgba(15, 15, 15, 0.7);
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            transition: 0.3s ease;
+  
+            opacity: 0;
+            transform: translateY(100%);
+  
+            display: flex;
+            align-items: center;
+            justify-content: center;
+  
+            .button {
+              font-family: var(--normal-font);
+              font-weight: bold;
+              font-size: 20px;
+              line-height: 24px;
+              color: #ffffff;
+              text-align: center;
+              padding: 15px 50px;
+              background-color: transparent;
+              cursor: pointer;
+              border: 1px solid white;
+            }
+          }
+          .heart__button {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            z-index: 2;
+  
+            .heart {
+              width: 20px;
+              height: 20px;
+              cursor: pointer;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              color: rgb(150, 150, 150);
+  
+              &.is-active {
+                i {
+                  color: #eccc5a;
+                }
+              }
+            }
+          }
+        }
+        .info__parfum {
+          background-color: #000 !important;
+          width: 100%;
+          text-align: center;
+          padding-top: 30px;
+  
+          span {
+            margin-top: 20px;
+            display: block;
+  
+            i {
+              font-size: 18px;
+              margin-right: 10px;
+              color: yellow;
+            }
+          }
+  
+          .name__parfum {
+            font-family: var(--normal-font);
+            font-style: normal;
+            font-weight: normal;
+            font-size: 15px;
+            line-height: 163%;
+            letter-spacing: 0.155em;
+            text-transform: uppercase;
+            color: #ffffff;
+          }
+  
+          .price__parfum {
+            font-family: var(--bold-font);
+            font-size: 20px;
+            line-height: 163%;
+            letter-spacing: 0.155em;
+            text-transform: uppercase;
+            color: #ffffff;
+            margin-top: 20px;
+          }
+        }
+      }
+    }
+    .btn {
+      padding: 12px 27px;
+      display: block;
+      margin: 0 auto;
+      cursor: pointer;
+      background-color: white;
+      font-family: var(--normal-font);
+      font-style: normal;
+      font-weight: bold;
+      font-size: 12px;
+      line-height: 15px;
+      color: #000000;
+      transition: 0.3s ease;
+      border: none;
+  
+      &:hover {
+        background-color: #eccc5a;
+      }
+    }
+  }
+  
+  footer {
+    width: 100%;
+    min-height: 300px;
+    background-color: #000;
+    background-position: left;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 100px;
+    position: relative;
+  
+    .footer__main {
+      width: 100%;
+      max-width: 1275px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-around;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      padding-top: 50px;
+  
+      .nav__box {
+        margin-top: 20px;
+        a {
+          font-family: var(--normal-font);
+          font-style: normal;
+          font-weight: normal;
+          font-size: 12px;
+          line-height: 14px;
+          color: #ffffff;
+          margin-bottom: 20px;
+        }
+      }
+  
+      .social__box {
+        margin-top: 20px;
+  
+        p {
+          margin-top: 10px;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 12px;
+          line-height: 14px;
+          /* identical to box height */
+  
+          color: #ffffff;
+        }
+  
+        i {
+          font-size: 25px;
+          color: #ffffff;
+          transition: 0.3s ease;
+  
+          &:hover {
+            color: #eccc5a;
+          }
+        }
+      }
+    }
+  }
+  
+  @media screen and (max-width: 1024px) {
+    .nav-links {
+      width: 60%;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    body {
+      overflow-x: hidden;
+  
+      nav {
+        .nav-links {
+          position: absolute;
+          right: 0px;
+          height: 92vh;
+          top: 8vh;
+          background-color: #5d4954;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          width: 50%;
+          transform: translateX(100%);
+          transition: transform 0.5s ease-in;
+  
+          li {
+            opacity: 0;
+          }
+        }
+  
+        .burger {
+          display: block;
+          cursor: pointer;
+        }
+  
+        .nav-active {
+          transform: translateX(0%);
+        }
+        @keyframes navLinkFade {
+          from {
+            opacity: 0;
+            transform: translateX(50px);
+          }
+          to {
+            opacity: 1;
+            transform: translateX(0px);
+          }
+        }
+  
+        .toggle .line1 {
+          transform: rotate(-45deg) translate(-5px, 6px);
+        }
+  
+        .toggle .line2 {
+          opacity: 0;
+        }
+  
+        .toggle .line3 {
+          transform: rotate(45deg) translate(-5px, -6px);
+        }
+      }
+    }
+  }
+  

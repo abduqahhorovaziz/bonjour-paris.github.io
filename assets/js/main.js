@@ -44,6 +44,7 @@ window.addEventListener('click', clickOutside)
 
 function openModal() {
     modal.style.display = 'block';
+    // console.log("jkaljd");
 }
 
 
@@ -52,3 +53,6 @@ function clickOutside(e){
         modal.style.display = 'none';
     }
 }
+
+
+

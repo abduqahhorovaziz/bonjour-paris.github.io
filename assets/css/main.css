@@ -555,6 +555,7 @@ header nav .heart-card span p {
           animation-name: modalopen;
   -webkit-animation-duration: 0.5s;
           animation-duration: 0.5s;
+  position: relative;
 }
 
 @-webkit-keyframes modalopen {
@@ -652,8 +653,12 @@ header nav .heart-card span p {
 .all__parfums .modal .modal__content .closeBtn {
   color: #ccc;
   float: right;
-  font-size: 18px;
-  display: none;
+  font-size: 44px;
+  display: block;
+  cursor: pointer;
+  top: 30px;
+  right: 30px;
+  position: absolute;
 }
 
 .all__parfums .swiper__products__one {

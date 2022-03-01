@@ -29,30 +29,16 @@ $(function () {
     });
 });
 
-var modal = document.getElementById('simpleModal');
-var modalBtn = document.getElementById('modalBtn');
 
-modalBtn.addEventListener('click', openModal);
-window.addEventListener('click', clickOutside)
+var modal = $('.modal');
 
+$('.button').click(function() {
+    modal.show();
+});
 
-// $(function () {
-//     $(".modalBtn").on("click", function () {
-//         $("#simpleModal").toggleClass("is-active");
-//     });
-// });
-
-function openModal() {
-    modal.style.display = 'block';
-    // console.log("jkaljd");
-}
-
-
-function clickOutside(e){
-    if(e.target == modal){
-        modal.style.display = 'none';
-    }
-}
+$('.closeBtn').click(function() {
+    modal.hide();
+});
 
 
 

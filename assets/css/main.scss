@@ -496,6 +496,8 @@ header {
       animation-name: modalopen;
       animation-duration: 0.5s;
 
+      position: relative;
+
       @keyframes modalopen {
         from {
           opacity: 0;
@@ -579,8 +581,12 @@ header {
       .closeBtn {
         color: #ccc;
         float: right;
-        font-size: 18px;
-        display: none;
+        font-size: 44px;
+        display: block;
+        cursor: pointer;
+        top: 30px;
+        right: 30px;
+        position: absolute;
       }
     }
   }
